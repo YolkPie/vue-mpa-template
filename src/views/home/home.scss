@@ -1,0 +1,17 @@
+.home {
+  padding: 10px;
+
+  &__title {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  &__feature {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  &__feature-item {
+    margin-top: 10px;
+  }
+}

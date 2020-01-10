@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= VUE_APP_TITLE %></title>
+    <% if (process.env.NODE_ENV === 'production') { %>
+      <% for(var css of htmlWebpackPlugin.options.cdn.css) { %>
+        <link href="<%=css%>" rel="preload" as="style">
+        <link rel="stylesheet" href="<%=css%>" as="style">
+      <% } %>
+      <% for(var js of htmlWebpackPlugin.options.cdn.js) { %>
+        <link href="<%=js%>" rel="preload" as="script">
+        <script src="<%=js%>"></script>
+      <% } %>
+    <% } %>
+    <!-- pre-render-loading抽出的css -->
+    <%= htmlWebpackPlugin.options.loading.css %>
+  </head>
+
+  <body>
+    <noscript>
+      <strong>您的浏览器不支持JavaScript,请使用高级浏览器</strong>
+    </noscript>
+    <div id="app">
+       <!-- loading base64图 -->
+       <%= htmlWebpackPlugin.options.loading.html %>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+
+</html>
