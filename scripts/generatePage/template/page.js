@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import App from './home.vue'
-import router from '@/router/home'
-import store from '@/store/home'
+import App from './{{pageName}}.vue'
+import router from '@/router/{{pageName}}'
+import store from '@/store/{{pageName}}'
 import '@/styles/base.scss'
 import { rem } from '@yolkpie/utils'
 // 注册全局插件
