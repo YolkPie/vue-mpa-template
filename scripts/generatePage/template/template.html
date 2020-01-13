@@ -20,8 +20,8 @@
         <script src="<%=js%>"></script>
       <% } %>
     <% } %>
-    <!-- pre-render-loading抽出的css -->
-    <%= htmlWebpackPlugin.options.loading.css %>
+    <!-- 骨架屏 css -->
+    <%= htmlWebpackPlugin.options.skeleton.css %>
   </head>
 
   <body>
@@ -29,8 +29,8 @@
       <strong>您的浏览器不支持JavaScript,请使用高级浏览器</strong>
     </noscript>
     <div id="app">
-       <!-- loading base64图 -->
-       <%= htmlWebpackPlugin.options.loading.html %>
+       <!-- 骨架屏 html -->
+       <%= htmlWebpackPlugin.options.skeleton.html %>
     </div>
     <!-- built files will be auto injected -->
   </body>

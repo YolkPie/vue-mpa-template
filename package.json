@@ -9,7 +9,8 @@
     "build:yufa": "vue-cli-service build --mode yufa",
     "build:test": "vue-cli-service build --mode test",
     "lint": "vue-cli-service lint",
-    "dist": "serve -s dist"
+    "dist": "serve -s dist",
+    "new": "node ./scripts/generatePage/index"
   },
   "dependencies": {
     "@yolkpie/utils": "^1.0.2",
@@ -28,6 +29,7 @@
     "@vue/cli-service": "^4.1.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.3",
+    "chalk": "^3.0.0",
     "compression-webpack-plugin": "^3.0.1",
     "cz-conventional-changelog": "^3.0.2",
     "eslint": "^5.16.0",
