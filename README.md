@@ -72,6 +72,7 @@
 ### 5.相关指令
 ```
 $ npm install           # 安装依赖
+$ npm run new           # 生成新页面
 $ npm run serve         # 运行项目（本地开发）
 $ npm run build         # 生产环境打包
 $ npm run build:prod    # 生产环境打包
@@ -89,7 +90,7 @@ $ npm run dist          # 本地预览打包文件
 >- 在`src/router`目录下生成页面路由
 >- 在`src/store`目录下生成页面状态
 3. `npm run serve`(安装成功后启动项目)；
-4. 项目在本地`localhost:80/[页面名称].html`端口运行。
+4. 项目在本地`localhost:80/[页面名称].html`运行， 默认运行在`80`端口，你也可以在`vue.config.js`中修改运行的端口。
 
 ### 7.关键目录
 关键目录及文件均可通过指令生成

@@ -1,6 +1,0 @@
-{
-  "hooks": {
-    "commit-msg": "validate-commit-msg",
-    "pre-commit": "vue-cli-service lint --no-fix"
-  }
-}
