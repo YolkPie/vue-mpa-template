@@ -3,6 +3,7 @@ const glob = require('glob')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 // const WorkboxPlugin = require('workbox-webpack-plugin')
 const WebpackBuildNotifierPlugin = require('webpack-build-notifier')
+const HashedModuleIdsPlugin = require('webpack/lib/HashedModuleIdsPlugin')
 // const pkg = require('./package.json')
 
 const resolvePath = dir => path.join(__dirname, dir)
@@ -51,6 +52,10 @@ module.exports = {
   pages: getEntry(pagePath),
   // 如果你不需要使用eslint，把 lintOnSave 设为false即可
   lintOnSave: true,
+  // 默认情况下 babel-loader 会忽略所有 node_modules 中的文件。如果你想要通过 Babel 显式转译一个依赖，可以在这个选项中列出来。
+  transpileDependencies: [
+    '@yolkpie/utils'
+  ],
   // 提供了一个 webpack 原始配置的上层抽象，
   // 使其可以定义具名的 loader 规则和具名插件，
   // 并有机会在后期进入这些规则并对它们的选项进行修改。
@@ -135,6 +140,10 @@ module.exports = {
           threshold: 8192,
           minRatio: 0.8
         })
+      )
+      // 模块的相对路径生成一个四位数的hash作为模块id
+      config.plugins.push(
+        new HashedModuleIdsPlugin()
       )
       // 生成sw文件，构建离线应用
       // 参考https://webpack.docschina.org/guides/progressive-web-application/
