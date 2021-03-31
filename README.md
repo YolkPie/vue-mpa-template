@@ -125,9 +125,9 @@ $ npm run dist          # 本地预览打包文件
 
 1. 从Master新建分支开发，每次上预发或上线之前，都需要拉取远端master代码，保证本地master代码为最新，合并master代码；
 2. 上线前：切换到本地master分支，合并开发分支代码到本地master分支；
-3. `npm run build`打包代码。检查**deploy/index.html**中是否为线上域名（ '//api.m.jd.com/api'）；
+3. `npm run build`打包代码。检查**deploy/index.html**中是否为线上域名（ '//api.m.xx.com/api'）；
 4. 提交代码至master远程；
-5. 在jdos的[**应用](http://console.jdos.jd.com/#/**/image)下，进行master的编译镜像；
+5. 在xxos的[**应用](http://console.xxos.xx.com/#/**/image)下，进行master的编译镜像；
 6. 在预发分支上先上线编译好的镜像，没有问题后，准备正式环境上线；
 7. 在正式环境上线，执行滚动更新，每次1个，间隔40秒（防止线上更新代码期间无法访问）；
 8. 结束后进行上线确认，否则会影响团队其他成员的上线。
@@ -136,29 +136,29 @@ $ npm run dist          # 本地预览打包文件
 
 1. 在开发分支上执行`npm run build:yufa`打包代码；
 2. 提交代码至分支远程；
-3. 在jdos的[**应用](http://console.jdos.jd.com/#/**/image)下，进行开发分支a的编译镜像，上预发。
+3. 在xxos的[**应用](http://console.xxos.xx.com/#/**/image)下，进行开发分支a的编译镜像，上预发。
 
 ### 10.相关文档
 
 #### 1.prd文档（erp@**）
 
-* [设计说明](http://**.jd.com)
-* [埋点](http://**.jd.com)
+* [设计说明](http://**.xx.com)
+* [埋点](http://**.xx.com)
 
 #### 2.后端接口文档（erp@**）
 
-* [商详页](http://**.jd.com)
-* [订单&优惠券](http://**.jd.com)
+* [商详页](http://**.xx.com)
+* [订单&优惠券](http://**.xx.com)
 
 #### 3.设计稿（erp@**）
 
-* [设计稿](http://**.jd.com)
-* [交互稿](http://**.jd.com)
+* [设计稿](http://**.xx.com)
+* [交互稿](http://**.xx.com)
 
 #### 4.外部依赖等其他文档
 
-* [文档1](http://**.jd.com)
-* [文档2](http://**.jd.com)
+* [文档1](http://**.xx.com)
+* [文档2](http://**.xx.com)
 
 ### 11.目录结构
 
@@ -235,7 +235,7 @@ https://cli.vuejs.org/zh/guide/mode-and-env.html
 ```
 # 左边是变量名(一般大写，下划线分割单词)，右边是变量值
 NODE_ENV = "production"
-REQUEST_URL = "//api.m.jd.com"
+REQUEST_URL = "//api.m.xx.com"
 ```
 只有以 `VUE_APP_` 开头的变量会被 webpack.DefinePlugin 静态嵌入到客户端侧的包中。可以在应用的代码中这样访问它们：
 ```javascript

@@ -168,7 +168,7 @@ module.exports = {
     // proxy: {
     //   // 例如将'localhost:8080/api/xxx'代理到'https://yujihu.cn/api/xxx'
     //   '/h5/api': {
-    //     target: 'http://car.jd.com', // 接口的域名
+    //     target: 'http://car.xx.com', // 接口的域名
     //     secure: false, // 是否验证SSL证书，如果是https接口，需要配置这个参数
     //     changeOrigin: true, // 将主机标头的原点更改为目标URL，如果接口跨域，需要进行这个参数配置
     //     pathRewrite: {
